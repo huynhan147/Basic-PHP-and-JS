@@ -26,9 +26,8 @@ const puppeteer = require('puppeteer');
 
 puppeteer.launch().then(async browser => {
   const page = await browser.newPage();
-  const response = await page.goto('http://qldt.ptit.edu.vn/default.aspx?page=thoikhoabieu&sta=0');
+  const response = await page.goto('https://www.w3schools.com/html/default.asp');
   console.log(await response.text());
-  // await response.text().pdf({path: 'hn.pdf', format: 'A4'});
   browser.close();
 });
 ```
