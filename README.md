@@ -1,1 +1,104 @@
-# Basic-PHP-and-JS
+# ĐỀ BÀI : [Link !](https://docs.google.com/document/d/1yF6Mv-TInH2Ui79lAtJ8W9RWuOKpru-DhR1zUqYio68/edit)
+# 1. Phân biệt array vs Object trong JS
+- Mảng để lưu trữ nhiều mục cùng loại
+- Mảng được đánh số chỉ mục và đối tượng được đặt tên chỉ mục
+- "Array" là phân lớp, hoặc mẫu phụ, của "Object". Vì vậy, "Array" kế thừa tất cả các tính năng từ "Object".
+- "Array" không phải là một kiểu dữ liệu mới. "Array" và "Object" đang chia sẻ cùng một kiểu dữ liệu "đối tượng".
+- Một đối tượng của "Object" có thể có các thuộc tính được lập chỉ mục bằng cách sử dụng cùng cú pháp với các đối tượng "Array".
+- Một đối tượng của "Object" không phải là một đối tượng của "Array".
+- Một đối tượng của "Array" cũng là một đối tượng của "Object".
+# 2. Khi nào nên dùng Object và khi nào nên dùng array?
+- Nếu muốn lưu trữ một loại số hoặc danh sách các đối tượng cùng loại-> sử dụng một mảng.
+# 3. Associative Array là gì? phân biệt so với array thường?
+- Associative Array là mảng với giá trị key được đặt tên và là một chuỗi
+- Phân biệt so với Array thường 
+	+> Mảng: các phần tử được lập chỉ mục bắt đầu bằng số nguyên 0 và liên tiếp.
+	+> Associative Array : lập chỉ mục bằng các chuỗi  tùy ý. Associative Array có thể sử dụng như các mảng chung chỉ đơn giản bằng cách dử dụng số để lập chỉ mục chúng.
+# 4. Có thể thay thế Object bằng Asscociative Array không?
+- Có thể thay thế.
+# 5. Đáp án :
+7
+8
+7
+# 6 Viết 1 đoạn code nhỏ bằng JS lấy nội dung html  của trang https://www.w3schools.com/html/default.asp
+``` 
+const puppeteer = require('puppeteer');
+
+puppeteer.launch().then(async browser => {
+  const page = await browser.newPage();
+  const response = await page.goto('http://qldt.ptit.edu.vn/default.aspx?page=thoikhoabieu&sta=0');
+  console.log(await response.text());
+  // await response.text().pdf({path: 'hn.pdf', format: 'A4'});
+  browser.close();
+});
+```
+# 7.Phân biệt Object trong JS và Object trong PHP ?
+# 8.PHP Associative Array là gì? phân biệt so với array thường? Cách duyệt Associative array và array thường khác nhau thế nào?
+- Mảng  kết hợp (associative array): là loại mảng với chỉ mục là chuỗi, các phần tử trong mảng sẽ được lưu trữ dưới dạng key-value
+- Phân biệt : Mảng thường : các chỉ mục là các số nguyên, liên tiếp
+		Mảng kết hợp : Chỉ mục là chuỗi hoặc số nguyên do mình gán.
+- Cách duyệt Associative array : Không kiểm soát các lần duyệt-- Array thường : có thể kiếm soát các lần duyệt
+# 9.
+```
+<?php
+$Object1 = (Object)[
+    'age'=> 18,
+    'name'=>'huy',
+];
+$Object2 = (Object)[
+    'age'=> 16,
+    'name'=>'nam',
+];
+$Object3 = (Object)[
+    'age'=> 21,
+    'name'=>'lan',
+];
+$arr = [
+$Object1,$Object2,$Object3
+];
+usort($arr,function($first,$second){
+    return $first->age > $second->age;
+});
+echo '<pre>';
+print_r($arr);
+ ?>
+```
+# 10.Phân biệt 3 loại link list? Nêu thử 1 ứng dụng của circula link list
+- Danh sách liên kết đơn (Simple Linked List): chỉ duyệt các phần tử theo chiều về trước.
+- Danh sách liên kết đôi (Doubly Linked List): các phần tử có thể được duyệt theo chiều về trước hoặc về sau.
+- Danh sách liên kết vòng (Circular Linked List): phần tử cuối cùng chứa link của phần tử đầu tiên như là next và phần tử đầu tiên có link tới phần tử cuối cùng như là prev
+- Ứng dụng : dùng danh sách liên kết vòng để theo dõi lượt của ai trong trò chơi theo lượt.
+# 11.Phân biệt link list - array (nếu ưu của link list và array)
+* Mảng : - Là tập hợp các phần tử có cùng kiểu dữ liệu với tên chung
+	 - Trong mảng, các phần tử có thể được truy cập bằng cách sử dụng giá trị chỉ mục/chỉ số, tức là các phần tử có thể được truy cập ngẫu nhiên
+	 - Trong mảng, các phần tử được lưu trữ liên tục trong bộ nhớ
+	 - Chèn và xóa mất nhiều thời gian hơn vì các phần tử được lưu trữ trong các vị trí bộ nhớ liên tiếp
+	 - Trong mảng, bộ nhớ được cấp phát tại thời gian biên dịch, tức là phân bổ bộ nhớ tĩnh 
+	 - Mảng có thể là một chiều, hai chiều hoặc đa chiều
+	 - Trong mảng, mỗi phần tử độc lập, không có kết nối với phần tử trước đó hoặc với vị trí của nó
+	 - Trong mảng, không có con trỏ nào được sử dụng như danh sách liên kết, do đó không cần thêm bộ nhớ cho con trỏ
+* Danh sách liên kết : - Là tập hợp các phần tử được sắp xếp được kết nối bởi các liên kết/ con trỏ
+		       - Trong danh sách liên kết, các phần tử không thể được truy cập ngẫu nhiên nhưng có thể được truy cập chỉ theo tuần tự và phần tử truy cập mất O(n) lần
+			- Các phần tử có thể được lưu trữ tại bất kỳ nơi nào có sẵn vì địa chỉ của nút được lưu trữ trong nút trước đó.
+			- Chèn và xóa nhanh chóng và dễ dàng trong danh sách liên kết vì chỉ có giá trị của con trỏ là cần thiết để thay đổi
+			- Bộ nhớ được cấp phát tại thời gian chạy tức là phần bổ bộ nhớ động
+			- Danh sách liên kết có thể là danh sách liên kết đơn, đôi và vòng
+			- Vị trí hoặc địa chỉ của các phần tử được lưu trữ trong phần liên kết của phần tử/ nút trước đó
+			- Sự kề nhau giữa các phần tử được duy trì bằng cách sử dụng con trỏ hoặc các liên kết, do đó các con trỏ được sử dụng và cần thêm không gian bộ nhớ.
+# 12. Khác nhau cơ bản giữa stack và queue? 1 ví dụ ứng dụng trong thực tế.
+* Stack : - Các đối tượng được chèn vào và gỡ bỏ ở cùng một đầu
+	  - Chỉ có 1 con trỏ được sử dụng. Nó chỉ lên trên cùng của ngăn xếp
+	  - Thứ tự Last In First Out
+	  - Các hoạt động trong ngăn xếp được gọi là push và pop
+	  - Ngăn xếp được hiển thị dưới dạng dọc
+	  - Ví dụ thực tế : Những cái đĩa khi được xếp vào nhau..
+* Queue : - Các đối tượng được chèn và loại bỏ khỏi các đầu khác nhau.ư
+	  - Hai con trỏ khác nhau được sử dụng cho các đầu phía trước và phía sau
+	  - Trong hàng đợi, đối tượng được chèn đầu tiên trước tiên sẽ bị xóa.
+	  - Thứ tự First In First Out
+	  - Các hoạt động trong ngăn xếp được gọi là enqueue và dequeue
+	  - Hàng đợi được hiển thị dưới dạng ngang
+	  - Ví dụ thực tế : Mọi người xếp hàng lên xe bus
+
+
+
