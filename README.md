@@ -15,7 +15,7 @@
 	+> Mảng: các phần tử được lập chỉ mục bắt đầu bằng số nguyên 0 và liên tiếp.
 	+> Associative Array : lập chỉ mục bằng các chuỗi  tùy ý. Associative Array có thể sử dụng như các mảng chung chỉ đơn giản bằng cách dử dụng số để lập chỉ mục chúng.
 # 4. Có thể thay thế Object bằng Asscociative Array không?
-- Có thể thay thế.
+- Có thể thay thế.Vì Object trong js là một Asscociative Array với vô số tính năng đặc biệt
 # 5. Đáp án :
 7
 8
@@ -32,6 +32,21 @@ puppeteer.launch().then(async browser => {
 });
 ```
 # 7.Phân biệt Object trong JS và Object trong PHP ?
+JS : Khởi tạo Object : ` let a = new Object();`
+PHP : Khỏi tạo Object : ```
+			$obj1 = new \stdClass;
+			$obj3 = (object)[];
+			$obj2 = new class{};
+			```
+JS : Duyệt OBJ bằng câu lệnh For(key in Object) - Lấy ra lần lượt theo key tăng dần nếu key là số hoặc chuỗi số;
+PHP : Duyệt OBJ bằng câu lệnh Foreach($Object as $key=>$value)- Lấy ra lần lượt theo thứ tự trong Object;
+JS : Object là một Asscociative Array với nhiều tính năng đặc biệt nên có thể truy xuất đến giá trị của thuộc tính trong Object như truy xuất giá trị của một phần tử trong Asscociative Array : ví dụ : `user['name']; user{name : 'Tun'};`
+PHP : Không thể truy xuất thẳng đến phần tử có key là số .. ví dụ `$Object ->0 (fasle)--`
+JS : Vì js có kiểu dữ liệu underfined nên Khi gọi đến thuộc tính ko có trong Object sẽ trả về giá trị là underfined
+PHP : Lỗi nếu gọi đến thuộc tính ko có trong Object
+JS : `let a = {}; let b = {}  ; a==b (false)`
+PHP : `$a = new StdClass(); $b = new StdClass();   a==b(true)`
+
 # 8.PHP Associative Array là gì? phân biệt so với array thường? Cách duyệt Associative array và array thường khác nhau thế nào?
 - Mảng  kết hợp (associative array): là loại mảng với chỉ mục là chuỗi, các phần tử trong mảng sẽ được lưu trữ dưới dạng key-value
 - Phân biệt : Mảng thường : các chỉ mục là các số nguyên, liên tiếp
