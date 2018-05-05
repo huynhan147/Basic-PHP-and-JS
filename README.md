@@ -1,4 +1,8 @@
+# Bài tập Trainee Colombo 2018
+
+Thực hiện bởi [Nguyễn Phi Huy](https://github.com/huynhan147)
 # ĐỀ BÀI : [Link !](https://docs.google.com/document/d/1yF6Mv-TInH2Ui79lAtJ8W9RWuOKpru-DhR1zUqYio68/edit)
+
 # 1. Phân biệt array vs Object trong JS
 - Mảng để lưu trữ nhiều mục cùng loại
 - Mảng được đánh số chỉ mục và đối tượng được đặt tên chỉ mục
