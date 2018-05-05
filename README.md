@@ -36,20 +36,20 @@ puppeteer.launch().then(async browser => {
 });
 ```
 # 7.Phân biệt Object trong JS và Object trong PHP ?
-JS : Khởi tạo Object : ` let a = new Object();`
-PHP : Khỏi tạo Object : ```
+- JS : Khởi tạo Object : ` let a = new Object();`
+- PHP : Khỏi tạo Object : ```
 			$obj1 = new \stdClass;
 			$obj3 = (object)[];
 			$obj2 = new class{};
 			```
-JS : Duyệt OBJ bằng câu lệnh For(key in Object) - Lấy ra lần lượt theo key tăng dần nếu key là số hoặc chuỗi số;
-PHP : Duyệt OBJ bằng câu lệnh Foreach($Object as $key=>$value)- Lấy ra lần lượt theo thứ tự trong Object;
-JS : Object là một Asscociative Array với nhiều tính năng đặc biệt nên có thể truy xuất đến giá trị của thuộc tính trong Object như truy xuất giá trị của một phần tử trong Asscociative Array : ví dụ : `user['name']; user{name : 'Tun'};`
-PHP : Không thể truy xuất thẳng đến phần tử có key là số .. ví dụ `$Object ->0 (fasle)--`
-JS : Vì js có kiểu dữ liệu underfined nên Khi gọi đến thuộc tính ko có trong Object sẽ trả về giá trị là underfined
-PHP : Lỗi nếu gọi đến thuộc tính ko có trong Object
-JS : `let a = {}; let b = {}  ; a==b (false)`
-PHP : `$a = new StdClass(); $b = new StdClass();   a==b(true)`
+- JS : Duyệt OBJ bằng câu lệnh For(key in Object) - Lấy ra lần lượt theo key tăng dần nếu key là số hoặc chuỗi số;
+- PHP : Duyệt OBJ bằng câu lệnh Foreach($Object as $key=>$value)- Lấy ra lần lượt theo thứ tự trong Object;
+- JS : Object là một Asscociative Array với nhiều tính năng đặc biệt nên có thể truy xuất đến giá trị của thuộc tính trong Object như - truy xuất giá trị của một phần tử trong Asscociative Array : ví dụ : `user['name']; user{name : 'Tun'};`
+- PHP : Không thể truy xuất thẳng đến phần tử có key là số .. ví dụ `$Object ->0 (fasle)--`
+- JS : Vì js có kiểu dữ liệu underfined nên Khi gọi đến thuộc tính ko có trong Object sẽ trả về giá trị là underfined
+- PHP : Lỗi nếu gọi đến thuộc tính ko có trong Object
+- JS : `let a = {}; let b = {}  ; a==b (false)`
+- PHP : `$a = new StdClass(); $b = new StdClass();   a==b(true)`
 
 # 8.PHP Associative Array là gì? phân biệt so với array thường? Cách duyệt Associative array và array thường khác nhau thế nào?
 - Mảng  kết hợp (associative array): là loại mảng với chỉ mục là chuỗi, các phần tử trong mảng sẽ được lưu trữ dưới dạng key-value
@@ -87,7 +87,8 @@ print_r($arr);
 - Danh sách liên kết vòng (Circular Linked List): phần tử cuối cùng chứa link của phần tử đầu tiên như là next và phần tử đầu tiên có link tới phần tử cuối cùng như là prev
 - Ứng dụng : dùng danh sách liên kết vòng để theo dõi lượt của ai trong trò chơi theo lượt.
 # 11.Phân biệt link list - array (nếu ưu của link list và array)
-* Mảng : - Là tập hợp các phần tử có cùng kiểu dữ liệu với tên chung
+* Mảng : 
+	  - Là tập hợp các phần tử có cùng kiểu dữ liệu với tên chung
 	 - Trong mảng, các phần tử có thể được truy cập bằng cách sử dụng giá trị chỉ mục/chỉ số, tức là các phần tử có thể được truy cập ngẫu nhiên
 	 - Trong mảng, các phần tử được lưu trữ liên tục trong bộ nhớ
 	 - Chèn và xóa mất nhiều thời gian hơn vì các phần tử được lưu trữ trong các vị trí bộ nhớ liên tiếp
@@ -95,28 +96,31 @@ print_r($arr);
 	 - Mảng có thể là một chiều, hai chiều hoặc đa chiều
 	 - Trong mảng, mỗi phần tử độc lập, không có kết nối với phần tử trước đó hoặc với vị trí của nó
 	 - Trong mảng, không có con trỏ nào được sử dụng như danh sách liên kết, do đó không cần thêm bộ nhớ cho con trỏ
-* Danh sách liên kết : - Là tập hợp các phần tử được sắp xếp được kết nối bởi các liên kết/ con trỏ
-		       - Trong danh sách liên kết, các phần tử không thể được truy cập ngẫu nhiên nhưng có thể được truy cập chỉ theo tuần tự và phần tử truy cập mất O(n) lần
-			- Các phần tử có thể được lưu trữ tại bất kỳ nơi nào có sẵn vì địa chỉ của nút được lưu trữ trong nút trước đó.
-			- Chèn và xóa nhanh chóng và dễ dàng trong danh sách liên kết vì chỉ có giá trị của con trỏ là cần thiết để thay đổi
-			- Bộ nhớ được cấp phát tại thời gian chạy tức là phần bổ bộ nhớ động
-			- Danh sách liên kết có thể là danh sách liên kết đơn, đôi và vòng
-			- Vị trí hoặc địa chỉ của các phần tử được lưu trữ trong phần liên kết của phần tử/ nút trước đó
-			- Sự kề nhau giữa các phần tử được duy trì bằng cách sử dụng con trỏ hoặc các liên kết, do đó các con trỏ được sử dụng và cần thêm không gian bộ nhớ.
+* Danh sách liên kết : 
+	- Là tập hợp các phần tử được sắp xếp được kết nối bởi các liên kết/ con trỏ
+	- Trong danh sách liên kết, các phần tử không thể được truy cập ngẫu nhiên nhưng có thể được truy cập chỉ theo tuần tự và phần tử truy cập mất O(n) lần
+	- Các phần tử có thể được lưu trữ tại bất kỳ nơi nào có sẵn vì địa chỉ của nút được lưu trữ trong nút trước đó.
+	- Chèn và xóa nhanh chóng và dễ dàng trong danh sách liên kết vì chỉ có giá trị của con trỏ là cần thiết để thay đổi
+	- Bộ nhớ được cấp phát tại thời gian chạy tức là phần bổ bộ nhớ động
+	- Danh sách liên kết có thể là danh sách liên kết đơn, đôi và vòng
+	- Vị trí hoặc địa chỉ của các phần tử được lưu trữ trong phần liên kết của phần tử/ nút trước đó
+	- Sự kề nhau giữa các phần tử được duy trì bằng cách sử dụng con trỏ hoặc các liên kết, do đó các con trỏ được sử dụng và cần thêm không gian bộ nhớ.
 # 12. Khác nhau cơ bản giữa stack và queue? 1 ví dụ ứng dụng trong thực tế.
-* Stack : - Các đối tượng được chèn vào và gỡ bỏ ở cùng một đầu
-	  - Chỉ có 1 con trỏ được sử dụng. Nó chỉ lên trên cùng của ngăn xếp
-	  - Thứ tự Last In First Out
-	  - Các hoạt động trong ngăn xếp được gọi là push và pop
-	  - Ngăn xếp được hiển thị dưới dạng dọc
-	  - Ví dụ thực tế : Những cái đĩa khi được xếp vào nhau..
-* Queue : - Các đối tượng được chèn và loại bỏ khỏi các đầu khác nhau.ư
-	  - Hai con trỏ khác nhau được sử dụng cho các đầu phía trước và phía sau
-	  - Trong hàng đợi, đối tượng được chèn đầu tiên trước tiên sẽ bị xóa.
-	  - Thứ tự First In First Out
-	  - Các hoạt động trong ngăn xếp được gọi là enqueue và dequeue
-	  - Hàng đợi được hiển thị dưới dạng ngang
-	  - Ví dụ thực tế : Mọi người xếp hàng lên xe bus
+* Stack : 
+	 - Các đối tượng được chèn vào và gỡ bỏ ở cùng một đầu
+	 - Chỉ có 1 con trỏ được sử dụng. Nó chỉ lên trên cùng của ngăn xếp
+	 - Thứ tự Last In First Out
+	 - Các hoạt động trong ngăn xếp được gọi là push và pop
+	 - Ngăn xếp được hiển thị dưới dạng dọc
+	 - Ví dụ thực tế : Những cái đĩa khi được xếp vào nhau..
+* Queue : 
+         - Các đối tượng được chèn và loại bỏ khỏi các đầu khác nhau.ư
+	 - Hai con trỏ khác nhau được sử dụng cho các đầu phía trước và phía sau
+	 - Trong hàng đợi, đối tượng được chèn đầu tiên trước tiên sẽ bị xóa.
+	 - Thứ tự First In First Out
+	 - Các hoạt động trong ngăn xếp được gọi là enqueue và dequeue
+	 - Hàng đợi được hiển thị dưới dạng ngang
+	 - Ví dụ thực tế : Mọi người xếp hàng lên xe bus
 
 
 
