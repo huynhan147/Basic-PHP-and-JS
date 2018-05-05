@@ -4,19 +4,16 @@ Thực hiện bởi [Nguyễn Phi Huy](https://github.com/huynhan147)
 # ĐỀ BÀI : [Link !](https://docs.google.com/document/d/1yF6Mv-TInH2Ui79lAtJ8W9RWuOKpru-DhR1zUqYio68/edit)
 
 # 1. Phân biệt array vs Object trong JS
-- Mảng để lưu trữ nhiều mục cùng loại
-- Mảng được đánh số chỉ mục và đối tượng được đặt tên chỉ mục
-- "Array" là phân lớp, hoặc mẫu phụ, của "Object". Vì vậy, "Array" kế thừa tất cả các tính năng từ "Object".
-- "Array" không phải là một kiểu dữ liệu mới. "Array" và "Object" đang chia sẻ cùng một kiểu dữ liệu "đối tượng".
-- Một đối tượng của "Object" có thể có các thuộc tính được lập chỉ mục bằng cách sử dụng cùng cú pháp với các đối tượng "Array".
-- Một đối tượng của "Object" không phải là một đối tượng của "Array".
-- Một đối tượng của "Array" cũng là một đối tượng của "Object".
+- Mảng là một đối tượng đặc biệt với các chỉ mục được đánh số
+- Mảng sử dụng các chỉ mục đánh số;
+- Object sử dụng các chỉ mục được đặt tên
 # 2. Khi nào nên dùng Object và khi nào nên dùng array?
-- Nếu muốn lưu trữ một loại số hoặc danh sách các đối tượng cùng loại-> sử dụng một mảng.
+- Sử dụng Object khi muốn tên các phần tử là một chuỗi
+- Sử dụng Array khi muốn tên phần tử là một số
 # 3. Associative Array là gì? phân biệt so với array thường?
-- Associative Array là mảng với giá trị key được đặt tên và là một chuỗi
+- Associative Array là mảng với các chỉ mục được đặt tên
 - Phân biệt so với Array thường 
-	+> Mảng: các phần tử được lập chỉ mục bắt đầu bằng số nguyên 0 và liên tiếp.
+	+> Mảng: các phần tử được lập chỉ mục bắt đầu bằng số nguyên.
 	+> Associative Array : lập chỉ mục bằng các chuỗi  tùy ý. Associative Array có thể sử dụng như các mảng chung chỉ đơn giản bằng cách dử dụng số để lập chỉ mục chúng.
 # 4. Có thể thay thế Object bằng Asscociative Array không?
 - Có thể thay thế.Vì Object trong js là một Asscociative Array với vô số tính năng đặc biệt
@@ -50,6 +47,8 @@ puppeteer.launch().then(async browser => {
 - PHP : Lỗi nếu gọi đến thuộc tính ko có trong Object
 - JS : `let a = {}; let b = {}  ; a==b (false)`
 - PHP : `$a = new StdClass(); $b = new StdClass();   a==b(true)`
+- JS : Truy cập thuộc tính đối tượng : `objectName.propertyName` or `objectName["propertyName"]`
+- PHP : Truy cập thuộc tính đối tượng `$Object->propertyName`
 
 # 8.PHP Associative Array là gì? phân biệt so với array thường? Cách duyệt Associative array và array thường khác nhau thế nào?
 - Mảng  kết hợp (associative array): là loại mảng với chỉ mục là chuỗi, các phần tử trong mảng sẽ được lưu trữ dưới dạng key-value
