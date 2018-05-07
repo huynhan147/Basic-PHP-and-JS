@@ -16,7 +16,7 @@ Thực hiện bởi [Nguyễn Phi Huy](https://github.com/huynhan147)
 	- Mảng: các phần tử được lập chỉ mục bắt đầu bằng số nguyên.
 	- Associative Array : lập chỉ mục bằng các chuỗi  tùy ý. Associative Array có thể sử dụng như các mảng chung chỉ đơn giản bằng cách dử dụng số để lập chỉ mục chúng.
 # 4. Có thể thay thế Object bằng Asscociative Array không?
-- Không thể thay thế vì nếu sử dụng Asscociative Array thì js sẽ xác định lại mảng đó thành đối tượng chuẩn. Sau đó một số phương thức, thuộc tính của mảng sẽ tạo ra kết quả không chính xác
+- Không thể thay thế vì nếu sử dụng Asscociative Array thì js sẽ xác định lại mảng đó thành đối tượng chuẩn. Sau đó một số phương thức, thuộc tính của mảng sẽ tạo ra kết quả không chính xác và JS không hỗ trợ Asscociative Array
 # 5. Đáp án :
 7
 8
