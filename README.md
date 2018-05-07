@@ -33,16 +33,18 @@ puppeteer.launch().then(async browser => {
 });
 ```
 # 7.Phân biệt Object trong JS và Object trong PHP ?
+## Khác nhau cơ bản : 
+- *Object trong JS thiên về việc xử lý danh sách*
+- *Object trong PHP thiên về việc xử lý các đối tượng trong class*
 - JS : Khởi tạo Object : ` let a = new Object();`
 - PHP : Khỏi tạo Object : ```
 			$obj1 = new \stdClass;
 			$obj3 = (object)[];
 			$obj2 = new class{};
+			$obj4 = new nameClass();
 			```
 - JS : Duyệt OBJ bằng câu lệnh For(key in Object) - Lấy ra lần lượt theo key tăng dần nếu key là số hoặc chuỗi số;
 - PHP : Duyệt OBJ bằng câu lệnh Foreach($Object as $key=>$value)- Lấy ra lần lượt theo thứ tự trong Object;
-- JS : Object là một Asscociative Array với nhiều tính năng đặc biệt nên có thể truy xuất đến giá trị của thuộc tính trong Object như - truy xuất giá trị của một phần tử trong Asscociative Array : ví dụ : `user['name']; user{name : 'Tun'};`
-- PHP : Không thể truy xuất thẳng đến phần tử có key là số .. ví dụ `$Object ->0 (fasle)--`
 - JS : Vì js có kiểu dữ liệu underfined nên Khi gọi đến thuộc tính ko có trong Object sẽ trả về giá trị là underfined
 - PHP : Lỗi nếu gọi đến thuộc tính ko có trong Object
 - JS : `let a = {}; let b = {}  ; a==b (false)`
